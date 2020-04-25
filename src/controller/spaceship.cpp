@@ -1,6 +1,6 @@
-#include "button.hpp"
-#include "hyperdrive.hpp"
-#include "laser.hpp"
+#include "model/button.hpp"
+#include "model/hyperdrive.hpp"
+#include "model/laser.hpp"
 #include "spaceship.hpp"
 
 Spaceship::Spaceship(Button* button, Hyperdrive* hyperdrive, Laser* laser) :

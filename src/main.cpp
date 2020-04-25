@@ -1,7 +1,7 @@
-#include "spaceship.hpp"
-#include "hyperdrive.hpp"
-#include "laser.hpp"
-#include "button.hpp"
+#include "controller/spaceship.hpp"
+#include "model/hyperdrive.hpp"
+#include "model/laser.hpp"
+#include "model/button.hpp"
 
 ArduinoHyperdrive hyperdrive(3);
 ArduinoLaser laser(4,5);
