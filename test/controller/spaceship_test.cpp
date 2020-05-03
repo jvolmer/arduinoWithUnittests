@@ -1,10 +1,10 @@
 #define BOOST_TEST_DYN_LINK
 #define BOOST_TEST_MODULE test_spaceship
 
-#include "controller/spaceship.hpp"
-#include "model/button.hpp"
-#include "model/hyperdrive.hpp"
-#include "model/laser.hpp"
+#include "src/controller/spaceship.hpp"
+#include "src/model/button.hpp"
+#include "src/model/hyperdrive.hpp"
+#include "src/model/laser.hpp"
 #include <boost/test/unit_test.hpp>
 #include <turtle/mock.hpp>
 

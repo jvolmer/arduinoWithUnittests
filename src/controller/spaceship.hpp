@@ -1,9 +1,9 @@
 #ifndef SPACESHIP_H
 #define SPACESHIP_H
 
-#include "model/hyperdrive.hpp"
-#include "model/laser.hpp"
-#include "model/button.hpp"
+#include "../model/hyperdrive.hpp"
+#include "../model/laser.hpp"
+#include "../model/button.hpp"
 
 class Spaceship
 {
