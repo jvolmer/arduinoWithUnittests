@@ -1,4 +1,4 @@
-#include "controller/spaceship.hpp"
+#include "controller/arduinoSpaceship.hpp"
 #include "model/hyperdrive.hpp"
 #include "model/laser.hpp"
 #include "model/button.hpp"
@@ -6,10 +6,11 @@
 ArduinoHyperdrive hyperdrive(3);
 ArduinoLaser laser(4,5);
 ArduinoButton button(2);
-Spaceship spaceship(&button, &hyperdrive, &laser);
+ArduinoSpaceship spaceship(&button, &hyperdrive, &laser);
 
 void setup() {
     spaceship.setup();
+    spaceship.print();
 }
 
 void loop() {
