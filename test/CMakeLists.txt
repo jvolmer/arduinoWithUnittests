@@ -7,6 +7,7 @@ if (NOT CMAKE_CXX_COMPILER MATCHES avr)
   find_package(turtle REQUIRED)
   find_package(Boost REQUIRED COMPONENTS unit_test_framework)
   target_link_libraries (${TARGET} PRIVATE ${CMAKE_PROJECT_NAME}_lib Boost::unit_test_framework turtle::turtle)
+  target_include_directories(${TARGET} PRIVATE ${CMAKE_SOURCE_DIR}/src)
 
   add_custom_target(test COMMAND ${TARGET}
     COMMENT "Execute tests")
