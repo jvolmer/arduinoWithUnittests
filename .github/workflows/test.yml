@@ -37,7 +37,7 @@
         run: pip install gcovr
       # build project
       - name: cmake generate
-        run: cmake -S . -B build -D CMAKE_BUILD_TYPE=Debug
+        run: cmake -S . -B build -D CMAKE_CXX_COMPILER=g++ -D CMAKE_BUILD_TYPE=Debug
       - name: cmake generate
         run: cmake --build build --target test
       # generate codecoverage report

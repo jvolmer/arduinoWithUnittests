@@ -1,12 +1,16 @@
-set(TARGET ${CMAKE_PROJECT_NAME}_test)
+if (NOT CMAKE_CXX_COMPILER MATCHES avr)
 
-add_executable(${TARGET} ${SOURCES} main_test.cpp)
+  set(TARGET ${CMAKE_PROJECT_NAME}_test)
 
-find_package(turtle REQUIRED)
-find_package(Boost REQUIRED COMPONENTS unit_test_framework)
-target_link_libraries (${TARGET} PRIVATE ${CMAKE_PROJECT_NAME}_lib Boost::unit_test_framework turtle::turtle)
+  add_executable(${TARGET} EXCLUDE_FROM_ALL main_test.cpp)
 
-add_custom_target(test COMMAND ${TARGET}
-  COMMENT "Execute tests")
+  find_package(turtle REQUIRED)
+  find_package(Boost REQUIRED COMPONENTS unit_test_framework)
+  target_link_libraries (${TARGET} PRIVATE ${CMAKE_PROJECT_NAME}_lib Boost::unit_test_framework turtle::turtle)
 
-add_subdirectory(controller)
+  add_custom_target(test COMMAND ${TARGET}
+    COMMENT "Execute tests")
+
+  add_subdirectory(controller)
+  
+endif()
