@@ -1,4 +1,4 @@
-# Arduino with Unittests
+# Arduino with Unittests [![Build](https://github.com/jvolmer/arduinoWithUnittests/actions/workflows/test.yml/badge.svg)](https://github.com/jvolmer/arduinoWithUnittests/actions/workflows/test.yml) [![Code Coverage](https://codecov.io/gh/jvolmer/arduinoWithUnittests/branch/main/graph/badge.svg)](https://codecov.io/gh/jvolmer/arduinoWithUnittests)
 
 This example program demonstrates a way to write and run unit tests for code written for the Aruduino. It uses the [Arduino Spaceship Interface Example](https://programminginarduino.wordpress.com/2016/02/29/project-2/) for this demonstration. It is based on the idea of testing all higher level classes that do not have any Arduino implementation. The Makefile defines the compilation of the tests and the arduino code, as well as the upload to the arduino board - such that the Arduino IDE is not needed at all.
 
