@@ -1,0 +1,19 @@
+*~
+#*
+TODO
+/build
+
+# object files
+*.o
+*.avr_o
+
+# executables
+*.x
+*.test
+*.hex
+
+# binary files
+*.elf
+
+# include files
+*.d
